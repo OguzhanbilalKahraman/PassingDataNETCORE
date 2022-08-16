@@ -1,0 +1,30 @@
+﻿@using PassingData.Models
+
+@using PassingData.Models.ViewModel
+@model CustomerAndProductVM
+
+
+<p>
+    Müşteriler
+</p>
+
+
+<ul>
+    @foreach (Customer item in Model.customers)
+    {
+
+        <li>@item.FirstName</li>
+
+    }
+
+</ul>
+
+
+<p>
+    Ürün @Model.product.ProductName
+</p>
+
+
+<p>
+    Tarih @Model.date
+</p>

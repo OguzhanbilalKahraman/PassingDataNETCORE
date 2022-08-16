@@ -1,0 +1,20 @@
+﻿@using PassingData.Models;
+<p>
+    Merhaba @ViewBag.Username
+</p>
+
+
+<p>
+    Merhaba @ViewBag.User.FirstName
+
+</p>
+
+<ul>
+    @foreach (User item in ViewBag.Users)
+    {
+        <li>@item.FirstName</li>
+        <li>@item.LastName</li>
+
+    }
+
+</ul>

@@ -1,0 +1,42 @@
+﻿@using PassingData.Models;
+@model List<Product>
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <style>
+            table{
+                border-collapse:collapse;
+                width:100%;
+
+            }
+            td,th{
+                border:1px solid #dddddd;
+                text-align:left;
+                padding:9px;
+            }
+            tr:nth-child(even){
+                background-color: #dddddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center">Ürün Listesi</h1>
+        <table>
+            
+            <tr>
+                <th>Ürün İsmi</th>
+                <th>Kategorisi</th>
+                <th>Ürün Fiyatı</th>
+            </tr> 
+            @foreach (Product item in @Model)
+            {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.CategoryName</td>
+            <td>@item.UnitPrices TL</td>
+        </tr>
+
+            }
+        </table>
+    </body>
+    </html>
